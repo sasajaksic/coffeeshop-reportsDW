@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>kafeterija</DataSourceReference>
+      <CommandText>SELECT proizvodID, kategorija, tip, proizvod, maloprodajnaCena, veleprodajnaCena
+FROM     kafeterija.proizvod</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="proizvodID">
+        <DataField>proizvodID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="kategorija">
+        <DataField>kategorija</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="tip">
+        <DataField>tip</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="proizvod">
+        <DataField>proizvod</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="maloprodajnaCena">
+        <DataField>maloprodajnaCena</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="veleprodajnaCena">
+        <DataField>veleprodajnaCena</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

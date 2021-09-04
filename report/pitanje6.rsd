@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>kafeterija</DataSourceReference>
+      <CommandText>SELECT kafeterija.datum.datum, kafeterija.stavka.stavkaID, kafeterija.stavka.datumID, kafeterija.stavka.proizvodID, kafeterija.stavka.ukupno, kafeterija.proizvod.grupa, kafeterija.proizvod.kategorija, kafeterija.proizvod.tip, 
+                  kafeterija.proizvod.proizvod, kafeterija.proizvod.promocija
+FROM     kafeterija.datum INNER JOIN
+                  kafeterija.stavka ON kafeterija.datum.datumID = kafeterija.stavka.datumID INNER JOIN
+                  kafeterija.proizvod ON kafeterija.stavka.proizvodID = kafeterija.proizvod.proizvodID
+WHERE  (kafeterija.proizvod.promocija = 'N')</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="datum">
+        <DataField>datum</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="stavkaID">
+        <DataField>stavkaID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="datumID">
+        <DataField>datumID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="proizvodID">
+        <DataField>proizvodID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ukupno">
+        <DataField>ukupno</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="grupa">
+        <DataField>grupa</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="kategorija">
+        <DataField>kategorija</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="tip">
+        <DataField>tip</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="proizvod">
+        <DataField>proizvod</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="promocija">
+        <DataField>promocija</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

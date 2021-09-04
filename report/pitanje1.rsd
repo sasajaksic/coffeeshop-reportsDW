@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>kafeterija</DataSourceReference>
+      <CommandText>SELECT kafeterija.datum.datum, kafeterija.stavka.stavkaID, kafeterija.kafeterija.adresa, kafeterija.stavka.ukupno
+FROM     kafeterija.datum INNER JOIN
+                  kafeterija.stavka ON kafeterija.datum.datumID = kafeterija.stavka.datumID INNER JOIN
+                  kafeterija.kafeterija ON kafeterija.stavka.kafeterijaID = kafeterija.kafeterija.kafeterijaID
+WHERE  (kafeterija.datum.datum = '2019-04-15')</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="datum">
+        <DataField>datum</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="stavkaID">
+        <DataField>stavkaID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="adresa">
+        <DataField>adresa</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ukupno">
+        <DataField>ukupno</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

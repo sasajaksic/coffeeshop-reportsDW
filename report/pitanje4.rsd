@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>kafeterija</DataSourceReference>
+      <CommandText>SELECT kafeterija.kafeterija.kafeterijaID, kafeterija.kafeterija.adresa, kafeterija.kupac.kupacID, kafeterija.kupac.brojKarticeLojalnosti, kafeterija.kupac.kupac
+FROM     kafeterija.kafeterija INNER JOIN
+                  kafeterija.kupac ON kafeterija.kafeterija.kafeterijaID = kafeterija.kupac.kafeterijaID</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="kafeterijaID">
+        <DataField>kafeterijaID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="adresa">
+        <DataField>adresa</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="kupacID">
+        <DataField>kupacID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="brojKarticeLojalnosti">
+        <DataField>brojKarticeLojalnosti</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="kupac">
+        <DataField>kupac</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

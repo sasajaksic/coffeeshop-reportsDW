@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>kafeterija</DataSourceReference>
+      <CommandText>SELECT kafeterija.kupac.kupac, kafeterija.kupac.generacija, kafeterija.stavka.stavkaID, kafeterija.proizvod.kategorija, kafeterija.datum.datum
+FROM     kafeterija.kupac INNER JOIN
+                  kafeterija.stavka ON kafeterija.kupac.kupacID = kafeterija.stavka.kupacID INNER JOIN
+                  kafeterija.proizvod ON kafeterija.stavka.proizvodID = kafeterija.proizvod.proizvodID INNER JOIN
+                  kafeterija.datum ON kafeterija.stavka.datumID = kafeterija.datum.datumID</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="kupac">
+        <DataField>kupac</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="generacija">
+        <DataField>generacija</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="stavkaID">
+        <DataField>stavkaID</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="kategorija">
+        <DataField>kategorija</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="datum">
+        <DataField>datum</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+    </Fields>
+    <Filters>
+      <Filter>
+        <FilterExpression>=Fields!kategorija.Value</FilterExpression>
+        <Operator>Equal</Operator>
+        <FilterValues>
+          <FilterValue>'coffee'</FilterValue>
+        </FilterValues>
+      </Filter>
+    </Filters>
+  </DataSet>
+</SharedDataSet>

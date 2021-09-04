@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="kafeterija">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=147.91.175.176;Initial Catalog=it44g2017</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>64641b39-fe9f-4c85-b098-6ccf4fade558</DataSourceID>
+</RptDataSource>
