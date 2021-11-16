@@ -29,7 +29,7 @@ Izvoru podataka se može pristupiti uspomoć linka: [Dataset](https://www.kaggle
 Tabele dimenzija u okviru OLAP šeme su: “Datum”, “Kupac”, “Zaposleni”, “Račun” i “Kafeterija”, dok tabela “Stavka” predstavlja tabelu činjenica. Najveća promena do koje je došlo, jeste kreiranje nove tabele, “Stavka”, uspomoć koje smo promenili granularnost sa pojedinačnog računa na pojedinačnu stavku računa.
 
 <div align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1DTZoTPPwMnPdJfIzXKlalS8M63IL9qsV" alt="My cool logo"/>
+  <img src="https://drive.google.com/uc?export=view&id=1DTZoTPPwMnPdJfIzXKlalS8M63IL9qsV"/>
 </div>
 
 ## Prikaz izveštaja
